@@ -23,7 +23,7 @@ if($user->register()){
 	$response = new Response();
 	$response->setSuccess(true);
 	$response->setHttpStatusCode(200);
-	$response->addMessage("Post Created");
+	$response->addMessage("User Created");
 	$response->send();
 }
 else{

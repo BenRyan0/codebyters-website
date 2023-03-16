@@ -39,7 +39,7 @@ class UserModel
         $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
 
         //execute the prepared statement
-        $stmt = $this->conn->connect()->prepare($query);
+        $stmt = $this->conn->prepare($query);
 
 		//clean data
 		$this->username = htmlspecialchars(strip_tags($this->username));
