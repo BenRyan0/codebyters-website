@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="h-screen flex items-center justify-center">
+
+      <div class="bg-white loginFormContainer flex flex-col items-center">
+        <div class="flex items-center">
+          <img
+            src="assets/img/codebyters-icon.png"
+            width="40"
+            height="40"
+            alt=""
+          />
+          <h1 class="text-3xl font-bold">
+            Codebyters <span class="font-light">Sign up</span>
+          </h1>
+        </div>
+        <form
+          class="w-full mt-10"
+        >
+          <label for="name" class="text-sm"
+            >Name <span class="text-red-600">*</span></label
+          >
+          <div class="flex gap-2 mb-4" id="name">
+            <input
+              type="text"
+              name="firstname"
+              class="w-full focus:outline-none border rounded-md h-10 p-3 placeholder:font-light placeholder:text-sm font-light text-md"
+              placeholder="Firstname"
+              required
+              ngModel
+            />
+            <input
+              type="text"
+              name="lastname"
+              class="w-full focus:outline-none border rounded-md h-10 p-3 placeholder:font-light placeholder:text-sm font-light text-md"
+              placeholder="Lastname"
+              required
+              ngModel
+            />
+          </div>
+          <label for="email" class="text-sm"
+            >Email <span class="text-red-600">*</span></label
+          >
+          <div class="flex gap-2 mb-4">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              class="w-full focus:outline-none border rounded-md h-10 p-3 placeholder:font-light placeholder:text-sm font-light text-md"
+              placeholder="Firstname"
+              required
+              ngModel
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              (keydown.space)="$event.preventDefault()"
+            />
+          </div>
+          <label for="password" class="text-sm"
+            >Password<span class="text-red-600">*</span></label
+          >
+          <div class="flex gap-2 mb-4">
+            <input
+              id="password"
+              type="password"
+              name="password"
+              class="w-full focus:outline-none border rounded-md h-10 p-3 placeholder:font-light placeholder:text-sm font-light text-md"
+              placeholder="Password"
+              required
+              ngModel
+            />
+          </div>
+          <label for="re_enter_password" class="text-sm"
+            >Re-enter Password <span class="text-red-600">*</span></label
+          >
+          <div class="flex gap-2">
+            <input
+              id="re_enter_password"
+              type="password"
+              name="re_enter_password"
+              class="w-full focus:outline-none border rounded-md h-10 p-3 placeholder:font-light placeholder:text-sm font-light text-md"
+              placeholder="Re-enter Password"
+              required
+              ngModel
+            />
+          </div>
+          <button class="w-full submit-btn h-12 rounded mt-5" type="submit">
+            Sign me in
+          </button>
+          <p class="registernow-text">
+            Already a member? Click
+            <a routerLink="/login" class="text-codebyters-teal">here</a> to
+            login
+          </p>
+        </form>
+        <div class="copyrights">
+          <hr />
+          <span>© Kaarlo Sasiang, All Rights Reserved 2022</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
